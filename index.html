@@ -18,57 +18,101 @@
       rel="stylesheet"
     />
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container header-inner">
+      <div class="container header-container">
         <a href="#">
           <img class="logo" src="./images/logo-bookmark.svg" alt="Logo" />
         </a>
 
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Features</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Pricing</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-cta" href="#">Login</a>
+            <li class="main-nav-item">
+              <a class="main-nav-link btn btn-secondary" href="#">Login</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-text-box">
-          <h1 class="heading-primary">A Simple Bookmark Manager</h1>
-          <p class="hero-text">
-            A clean and simple interface to organize your favourite websites.
-            Open a new browser tab and see your sites load instantly. Try it for
-            free.
-          </p>
-          <a class="btn btn-primary" href="#">Get it on Chrome</a>
-          <a class="btn btn-light" href="#">Get it on Firefox</a>
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">A Simple Bookmark Manager</h1>
+            <p class="hero-text">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+            <a class="btn btn-primary margin-right" href="#"
+              >Get it on Chrome</a
+            >
+            <a class="btn btn-light" href="#">Get it on Firefox</a>
+          </div>
+          <div class="hero-img-box">
+            <img
+              class="hero-img"
+              src="./images/illustration-hero.svg"
+              alt="Ilustration bookmark app on tablets"
+            />
+          </div>
         </div>
-        <div class="hero-img-box">
-          <img
-            src="./images/illustration-hero.svg"
-            alt="Ilustration bookmark app on tablets"
-          />
+      </section>
+
+      <!-- FEATURES SECTION -->
+      <section class="features-section">
+        <div class="container features-container">
+          <header class="features-header">
+            <h2 class="heading-secondary">Features</h2>
+            <p class="features-text">
+              Our aim is to make it quick and easy for you to access your
+              favourite websites. Your bookmarks sync between your devices so
+              you can access them on the go.
+            </p>
+          </header>
+          <nav class="tab-nav">
+            <ul class="tab-nav-list">
+              <li><a class="tab-nav-link" href="#">Simple Bookmarking</a></li>
+              <li><a class="tab-nav-link" href="#">Speedy Searching</a></li>
+              <li><a class="tab-nav-link" href="#">Easy Sharing</a></li>
+            </ul>
+          </nav>
+          <main class="feature-inner">
+            <div class="feature-inner-box">
+              <img
+                src="./images/illustration-features-tab-1.svg"
+                alt="Ilustration tab image"
+              />
+            </div>
+            <div class="feature-inner-text-box">
+              <h3 class="heading-tertiary">Bookmark in one click</h3>
+              <p class="feature-inner-text">
+                Organize your however you like. Our simple drag-and-drop
+                interface gives you control over how you manage your favourite
+                sites.
+              </p>
+              <a class="btn btn-primary" href="#">More Info</a>
+            </div>
+          </main>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- <footer>
 			<p class="attribution">

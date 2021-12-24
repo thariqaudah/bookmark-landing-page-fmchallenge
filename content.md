@@ -13,7 +13,9 @@ Get it on Chrome Get it on Firefox
 
 Features Our aim is to make it quick and easy for you to access your
 favourite websites. Your bookmarks sync between your devices so you can
-access them on the go. Simple Bookmarking Speedy Searching Easy Sharing
+access them on the go.
+Simple Bookmarking Speedy Searching Easy Sharing
+
 Bookmark in one click Organize your bookmarks however you like. Our simple
 drag-and-drop interface gives you complete control over how you manage your
 favourite sites. More Info Intelligent search Our powerful search feature
