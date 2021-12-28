@@ -23,6 +23,7 @@ html {
 	/* 10px / 16px = 0.625 */
 	/* For simplify into rem units */
 	font-size: 62.5%;
+	overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
 /* UTILITY CLASS */
 
 .container {
+	width: 100%;
 	max-width: 144rem;
 	margin: 0 auto;
 	padding: 0 3.2rem;

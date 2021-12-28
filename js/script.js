@@ -1,27 +1,28 @@
+// Mobile Navigation
+
 // Features tab
-const tabNavLinks = document.querySelectorAll('.tab-nav-link')
-const featuresInner = document.querySelectorAll('.feature-inner')
+const tabNav = document.querySelector('.tab-nav')
 
-tabNavLinks[0].classList.add('active')
-featuresInner[0].style.display = 'grid'
+tabNav.addEventListener('click', e => {
+	e.preventDefault()
 
-tabNavLinks.forEach(tab => {
-	tab.addEventListener('click', e => {
-		e.preventDefault()
-		featuresInner.forEach(featureInner => (featureInner.style.display = 'none'))
-		tabNavLinks.forEach(tab => tab.classList.remove('active'))
+	const element = e.target
 
-		tab.classList.add('active')
-		const navId = tab.id
+	if (element.classList.contains('tab-nav-link')) {
+		// Active elemet
+		const activeNav = document.querySelector('.tab-nav-link.active')
+		const activeFeature = document.querySelector('.feature-inner.active')
 
-		if (navId === 'navBookmarking') {
-			document.querySelector('#featureBookmarking').style.display = 'grid'
-		} else if (navId === 'navSearching') {
-			document.querySelector('#featureSearcing').style.display = 'grid'
-		} else {
-			document.querySelector('#featureSharing').style.display = 'grid'
-		}
-	})
+		// Remove active class from active el
+		activeNav.classList.remove('active')
+		activeFeature.classList.remove('active')
+
+		// Re-add active class for new el
+		const href = element.getAttribute('href')
+		const selectedFeature = document.querySelector(href)
+		element.classList.add('active')
+		selectedFeature.classList.add('active')
+	}
 })
 
 // Accordion
@@ -44,20 +45,22 @@ accordionQuestions.forEach(question => {
 
 // Contact Form
 const form = document.querySelector('.form')
-let message
+const inputContainer = form.firstElementChild
+const inputText = inputContainer.firstElementChild
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
 
-	message = null
+	inputContainer.classList.remove('error')
 
-	const inputText = form.firstElementChild.value
-	const isMatch = inputText.match(
+	const isMatch = inputText.value.match(
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	)
 
 	if (!isMatch) {
-		message = "Whoops, make sure it's an email"
+		inputContainer.classList.add('error')
 		return
 	}
+
+	inputText.value = ''
 })
