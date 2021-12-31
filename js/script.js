@@ -1,46 +1,58 @@
 // Mobile Navigation
+const header = document.querySelector('.header')
+const toggleBtnOpen = document.querySelector('.main-nav .toggle-btn')
+const toggleBtnClose = document.querySelector('.mobile-nav .toggle-btn')
+
+toggleBtnOpen.addEventListener('click', () => {
+  console.log('open nav')
+  header.classList.add('nav-open')
+})
+toggleBtnClose.addEventListener('click', () => {
+  console.log('close nav')
+  header.classList.remove('nav-open')
+})
 
 // Features tab
 const tabNav = document.querySelector('.tab-nav')
 
 tabNav.addEventListener('click', e => {
-	e.preventDefault()
+  e.preventDefault()
 
-	const element = e.target
+  const element = e.target
 
-	if (element.classList.contains('tab-nav-link')) {
-		// Active elemet
-		const activeNav = document.querySelector('.tab-nav-link.active')
-		const activeFeature = document.querySelector('.feature-inner.active')
+  if (element.classList.contains('tab-nav-link')) {
+    // Active elemet
+    const activeNav = document.querySelector('.tab-nav-link.active')
+    const activeFeature = document.querySelector('.feature-inner.active')
 
-		// Remove active class from active el
-		activeNav.classList.remove('active')
-		activeFeature.classList.remove('active')
+    // Remove active class from active el
+    activeNav.classList.remove('active')
+    activeFeature.classList.remove('active')
 
-		// Re-add active class for new el
-		const href = element.getAttribute('href')
-		const selectedFeature = document.querySelector(href)
-		element.classList.add('active')
-		selectedFeature.classList.add('active')
-	}
+    // Re-add active class for new el
+    const href = element.getAttribute('href')
+    const selectedFeature = document.querySelector(href)
+    element.classList.add('active')
+    selectedFeature.classList.add('active')
+  }
 })
 
 // Accordion
 const accordionQuestions = document.querySelectorAll('.faq-question')
 
 accordionQuestions.forEach(question => {
-	question.addEventListener('click', () => {
-		question.classList.toggle('accordion-active')
+  question.addEventListener('click', () => {
+    question.classList.toggle('accordion-active')
 
-		const height = question.nextElementSibling.scrollHeight
-		if (question.classList.contains('accordion-active')) {
-			question.nextElementSibling.style.maxHeight = `${height}px`
-			question.nextElementSibling.style.paddingTop = '24px'
-		} else {
-			question.nextElementSibling.style.maxHeight = 0
-			question.nextElementSibling.style.paddingTop = 0
-		}
-	})
+    const height = question.nextElementSibling.scrollHeight
+    if (question.classList.contains('accordion-active')) {
+      question.nextElementSibling.style.maxHeight = `${height}px`
+      question.nextElementSibling.style.paddingTop = '24px'
+    } else {
+      question.nextElementSibling.style.maxHeight = 0
+      question.nextElementSibling.style.paddingTop = 0
+    }
+  })
 })
 
 // Contact Form
@@ -49,18 +61,18 @@ const inputContainer = form.firstElementChild
 const inputText = inputContainer.firstElementChild
 
 form.addEventListener('submit', e => {
-	e.preventDefault()
+  e.preventDefault()
 
-	inputContainer.classList.remove('error')
+  inputContainer.classList.remove('error')
 
-	const isMatch = inputText.value.match(
-		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-	)
+  const isMatch = inputText.value.match(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  )
 
-	if (!isMatch) {
-		inputContainer.classList.add('error')
-		return
-	}
+  if (!isMatch) {
+    inputContainer.classList.add('error')
+    return
+  }
 
-	inputText.value = ''
+  inputText.value = ''
 })

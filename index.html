@@ -1,447 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/general.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/mobile.css" />
-		<title>Frontend Mentor | Bookmark landing page</title>
-	</head>
-	<body>
-		<!-- HEADER -->
-		<header class="header nav-open">
-			<div class="container header-container">
-				<a class="logo-link" href="#">
-					<img class="logo" src="./images/logo-bookmark.svg" alt="Logo" />
-					<img
-						class="logo logo-white"
-						src="./images/logo-bookmark-white.svg"
-						alt="Logo"
-					/>
-				</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <!-- Main Nav -->
+        <nav class="main-nav">
+          <a class="logo-link" href="#">
+            <img class="logo" src="./images/logo-bookmark.svg" alt="Logo" />
+          </a>
 
-				<nav class="main-nav">
-					<ul class="main-nav-list">
-						<li class="main-nav-item">
-							<a class="main-nav-link" href="#">Features</a>
-						</li>
-						<li class="main-nav-item">
-							<a class="main-nav-link" href="#">Pricing</a>
-						</li>
-						<li class="main-nav-item">
-							<a class="main-nav-link" href="#">Contact</a>
-						</li>
-						<li class="main-nav-item">
-							<a class="main-nav-link btn btn-secondary" href="#">Login</a>
-						</li>
-					</ul>
-				</nav>
+          <ul class="main-nav-list">
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Features</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Pricing</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Contact</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="main-nav-link btn btn-secondary" href="#">Login</a>
+            </li>
+          </ul>
 
-				<button class="toggle-btn">
-					<ion-icon class="toggle-icon" name="menu-outline"></ion-icon>
-					<ion-icon class="toggle-icon" name="close-outline"></ion-icon>
-				</button>
-			</div>
-		</header>
+          <button class="toggle-btn">
+            <ion-icon class="toggle-icon" name="menu-outline"></ion-icon>
+          </button>
+        </nav>
 
-		<main>
-			<!-- HERO SECTION -->
-			<section class="hero-section">
-				<div class="container hero-container">
-					<div class="hero-text-box">
-						<h1 class="heading-primary">A Simple Bookmark Manager</h1>
-						<p class="hero-text">
-							A clean and simple interface to organize your favourite websites.
-							Open a new browser tab and see your sites load instantly. Try it
-							for free.
-						</p>
-						<a class="btn btn-primary margin-right" href="#"
-							>Get it on Chrome</a
-						>
-						<a class="btn btn-light" href="#">Get it on Firefox</a>
-					</div>
-					<div class="hero-img-box">
-						<img
-							class="hero-img"
-							src="./images/illustration-hero.svg"
-							alt="Ilustration bookmark app on tablets"
-						/>
-					</div>
-				</div>
-			</section>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav">
+          <a class="logo-link" href="#">
+            <img
+              class="logo"
+              src="./images/logo-bookmark-white.svg"
+              alt="Logo"
+            />
+          </a>
 
-			<!-- FEATURES SECTION -->
-			<section class="features-section">
-				<div class="container features-container">
-					<header class="features-header">
-						<h2 class="heading-secondary">Features</h2>
-						<p class="features-text">
-							Our aim is to make it quick and easy for you to access your
-							favourite websites. Your bookmarks sync between your devices so
-							you can access them on the go.
-						</p>
-					</header>
-					<nav class="tab-nav">
-						<ul class="tab-nav-list">
-							<li class="tab-nav-item">
-								<a class="tab-nav-link active" href="#featureBookmarking"
-									>Simple Bookmarking</a
-								>
-							</li>
-							<li class="tab-nav-item">
-								<a class="tab-nav-link" href="#featureSearching"
-									>Speedy Searching</a
-								>
-							</li>
-							<li class="tab-nav-item">
-								<a class="tab-nav-link" href="#featureSharing">Easy Sharing</a>
-							</li>
-						</ul>
-					</nav>
-					<main>
-						<!-- FEATURE TAB 1 -->
-						<div class="feature-inner active" id="featureBookmarking">
-							<div class="feature-inner-img-box">
-								<img
-									class="feature-inner-img"
-									src="./images/illustration-features-tab-1.svg"
-									alt="Ilustration tab image"
-								/>
-							</div>
-							<div class="feature-inner-text-box">
-								<h3 class="heading-tertiary">Bookmark in one click</h3>
-								<p class="feature-inner-text">
-									Organize your however you like. Our simple drag-and-drop
-									interface gives you control over how you manage your favourite
-									sites.
-								</p>
-								<a class="btn btn-primary" href="#">More Info</a>
-							</div>
-						</div>
-						<!-- FEATURE TAB 2-->
-						<div class="feature-inner" id="featureSearching">
-							<div class="feature-inner-img-box">
-								<img
-									class="feature-inner-img"
-									src="./images/illustration-features-tab-2.svg"
-									alt="Ilustration tab image"
-								/>
-							</div>
-							<div class="feature-inner-text-box">
-								<h3 class="heading-tertiary">Intelligent search</h3>
-								<p class="feature-inner-text">
-									Our powerful search feature will help you find saved sites in
-									no time at all. No need to trawl through all of your
-									bookmarks.
-								</p>
-								<a class="btn btn-primary" href="#">More Info</a>
-							</div>
-						</div>
-						<!-- FEATURE TAB 3 -->
-						<div class="feature-inner" id="featureSharing">
-							<div class="feature-inner-img-box">
-								<img
-									class="feature-inner-img"
-									src="./images/illustration-features-tab-3.svg"
-									alt="Ilustration tab image"
-								/>
-							</div>
-							<div class="feature-inner-text-box">
-								<h3 class="heading-tertiary">Share your bookmarks</h3>
-								<p class="feature-inner-text">
-									Easily share your bookmarks and collections with others.
-									Create a shareable link that you can send at the click of a
-									button.
-								</p>
-								<a class="btn btn-primary" href="#">More Info</a>
-							</div>
-						</div>
-					</main>
-				</div>
-			</section>
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Features</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Pricing</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="#">Contact</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link btn btn-secondary" href="#">Login</a>
+            </li>
 
-			<!-- CTA SECTION -->
-			<section class="cta-section">
-				<div class="container cta-container">
-					<header class="cta-header">
-						<h2 class="heading-secondary">Download the extension</h2>
-						<p class="cta-text">
-							We’ve got more browsers in the pipeline. Please do let us know if
-							you’ve got a favourite you’d like us to prioritize.
-						</p>
-					</header>
-					<main class="cta-cards">
-						<div class="cta-card">
-							<div class="card-body">
-								<img
-									class="card-image"
-									src="images/logo-chrome.svg"
-									alt="Google Chrome"
-								/>
-								<p class="card-title">Add to Chrome</p>
-								<p class="card-text">Minimum version 62</p>
-							</div>
-							<img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
-							<div class="card-footer">
-								<button class="btn btn-primary">Add & Install Extension</button>
-							</div>
-						</div>
-						<div class="cta-card">
-							<div class="card-body">
-								<img
-									class="card-image"
-									src="images/logo-firefox.svg"
-									alt="Mozilla Firefox"
-								/>
-								<p class="card-title">Add to Firefox</p>
-								<p class="card-text">Minimum version 55</p>
-							</div>
-							<img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
-							<div class="card-footer">
-								<button class="btn btn-primary">Add & Install Extension</button>
-							</div>
-						</div>
-						<div class="cta-card">
-							<div class="card-body">
-								<img
-									class="card-image"
-									src="images/logo-opera.svg"
-									alt="Google Chrome"
-								/>
-								<p class="card-title">Add to Opera</p>
-								<p class="card-text">Minimum version 46</p>
-							</div>
-							<img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
-							<div class="card-footer">
-								<button class="btn btn-primary">Add & Install Extension</button>
-							</div>
-						</div>
-					</main>
-				</div>
-			</section>
+            <div class="mobile-socials">
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="20"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </div>
+          </ul>
+          <button class="toggle-btn">
+            <ion-icon class="toggle-icon" name="close-outline"></ion-icon>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-			<!-- F.A.Q SECTION -->
-			<section class="faq-section">
-				<div class="container">
-					<header class="faq-header">
-						<h2 class="heading-secondary">Frequently Asked Questions</h2>
-						<p class="faq-text">
-							Here are some of our FAQs. If you have any other questions you’d
-							like answered please feel free to email us.
-						</p>
-					</header>
-					<main>
-						<ul class="faq-list">
-							<li class="faq-item">
-								<div class="faq-question">
-									<span>What is Bookmark?</span>
-									<svg
-										class="icon-arrow"
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</div>
-								<p class="faq-answer">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-									tincidunt justo eget ultricies fringilla. Phasellus blandit
-									ipsum quis quam ornare mattis.
-								</p>
-							</li>
-							<li class="faq-item">
-								<div class="faq-question">
-									<span> How can I request a new browser?</span>
-									<svg
-										class="icon-arrow"
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</div>
-								<p class="faq-answer">
-									Vivamus luctus eros aliquet convallis ultricies. Mauris augue
-									massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
-									luctus eros aliquet convallis ultricies. Mauris augue massa,
-									ultricies non ligula. Suspendisse imperdie tVivamus luctus
-									eros aliquet convallis ultricies. Mauris augue massa,
-									ultricies non ligula. Suspendisse imperdiet.
-								</p>
-							</li>
-							<li class="faq-item">
-								<div class="faq-question">
-									<span>Is there a mobile app?</span>
-									<svg
-										class="icon-arrow"
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</div>
-								<p class="faq-answer">
-									Sed consectetur quam id neque fermentum accumsan. Praesent
-									luctus vestibulum dolor, ut condimentum urna vulputate eget.
-									Cras in ligula quis est pharetra mattis sit amet pharetra
-									purus. Sed sollicitudin ex et ultricies bibendum.
-								</p>
-							</li>
-							<li class="faq-item">
-								<div class="faq-question">
-									<span>What about other Chromium browsers?</span>
-									<svg
-										class="icon-arrow"
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-6 w-6"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</div>
-								<p class="faq-answer">
-									Integer condimentum ipsum id imperdiet finibus. Vivamus in
-									placerat mi, at euismod dui. Aliquam vitae neque eget nisl
-									gravida pellentesque non ut velit.
-								</p>
-							</li>
-						</ul>
-						<button class="btn btn-primary">More Info</button>
-					</main>
-				</div>
-			</section>
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">A Simple Bookmark Manager</h1>
+            <p class="hero-text">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+            <a class="btn btn-primary margin-right" href="#"
+              >Get it on Chrome</a
+            >
+            <a class="btn btn-light" href="#">Get it on Firefox</a>
+          </div>
+          <div class="hero-img-box">
+            <img
+              class="hero-img"
+              src="./images/illustration-hero.svg"
+              alt="Ilustration bookmark app on tablets"
+            />
+          </div>
+        </div>
+      </section>
 
-			<!-- CONTACT SECTION -->
-			<section class="contact-section">
-				<div class="container contact-container">
-					<p class="contact-subheading">35,000+ already joined</p>
-					<h2 class="heading-secondary">
-						Stay up-to-date with what we’re doing
-					</h2>
-					<form action="#" class="form">
-						<div class="input-container">
-							<input type="text" placeholder="Enter your email address" />
-							<div class="error-msg">Whoops, make sure it's an email</div>
-						</div>
-						<button class="btn btn-secondary" type="submit">Contact Us</button>
-					</form>
-				</div>
-			</section>
-		</main>
+      <!-- FEATURES SECTION -->
+      <section class="features-section">
+        <div class="container features-container">
+          <header class="features-header">
+            <h2 class="heading-secondary">Features</h2>
+            <p class="features-text">
+              Our aim is to make it quick and easy for you to access your
+              favourite websites. Your bookmarks sync between your devices so
+              you can access them on the go.
+            </p>
+          </header>
+          <nav class="tab-nav">
+            <ul class="tab-nav-list">
+              <li class="tab-nav-item">
+                <a class="tab-nav-link active" href="#featureBookmarking"
+                  >Simple Bookmarking</a
+                >
+              </li>
+              <li class="tab-nav-item">
+                <a class="tab-nav-link" href="#featureSearching"
+                  >Speedy Searching</a
+                >
+              </li>
+              <li class="tab-nav-item">
+                <a class="tab-nav-link" href="#featureSharing">Easy Sharing</a>
+              </li>
+            </ul>
+          </nav>
+          <main>
+            <!-- FEATURE TAB 1 -->
+            <div class="feature-inner active" id="featureBookmarking">
+              <div class="feature-inner-img-box">
+                <img
+                  class="feature-inner-img"
+                  src="./images/illustration-features-tab-1.svg"
+                  alt="Ilustration tab image"
+                />
+              </div>
+              <div class="feature-inner-text-box">
+                <h3 class="heading-tertiary">Bookmark in one click</h3>
+                <p class="feature-inner-text">
+                  Organize your however you like. Our simple drag-and-drop
+                  interface gives you control over how you manage your favourite
+                  sites.
+                </p>
+                <a class="btn btn-primary" href="#">More Info</a>
+              </div>
+            </div>
+            <!-- FEATURE TAB 2-->
+            <div class="feature-inner" id="featureSearching">
+              <div class="feature-inner-img-box">
+                <img
+                  class="feature-inner-img"
+                  src="./images/illustration-features-tab-2.svg"
+                  alt="Ilustration tab image"
+                />
+              </div>
+              <div class="feature-inner-text-box">
+                <h3 class="heading-tertiary">Intelligent search</h3>
+                <p class="feature-inner-text">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <a class="btn btn-primary" href="#">More Info</a>
+              </div>
+            </div>
+            <!-- FEATURE TAB 3 -->
+            <div class="feature-inner" id="featureSharing">
+              <div class="feature-inner-img-box">
+                <img
+                  class="feature-inner-img"
+                  src="./images/illustration-features-tab-3.svg"
+                  alt="Ilustration tab image"
+                />
+              </div>
+              <div class="feature-inner-text-box">
+                <h3 class="heading-tertiary">Share your bookmarks</h3>
+                <p class="feature-inner-text">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <a class="btn btn-primary" href="#">More Info</a>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="container footer-container">
-				<a class="logo-link" href="#">
-					<img class="logo" src="images/logo-bookmark-white.svg" alt="Logo" />
-				</a>
+      <!-- CTA SECTION -->
+      <section class="cta-section">
+        <div class="container cta-container">
+          <header class="cta-header">
+            <h2 class="heading-secondary">Download the extension</h2>
+            <p class="cta-text">
+              We’ve got more browsers in the pipeline. Please do let us know if
+              you’ve got a favourite you’d like us to prioritize.
+            </p>
+          </header>
+          <main class="cta-cards">
+            <div class="cta-card">
+              <div class="card-body">
+                <img
+                  class="card-image"
+                  src="images/logo-chrome.svg"
+                  alt="Google Chrome"
+                />
+                <p class="card-title">Add to Chrome</p>
+                <p class="card-text">Minimum version 62</p>
+              </div>
+              <img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
+              <div class="card-footer">
+                <button class="btn btn-primary">Add & Install Extension</button>
+              </div>
+            </div>
+            <div class="cta-card">
+              <div class="card-body">
+                <img
+                  class="card-image"
+                  src="images/logo-firefox.svg"
+                  alt="Mozilla Firefox"
+                />
+                <p class="card-title">Add to Firefox</p>
+                <p class="card-text">Minimum version 55</p>
+              </div>
+              <img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
+              <div class="card-footer">
+                <button class="btn btn-primary">Add & Install Extension</button>
+              </div>
+            </div>
+            <div class="cta-card">
+              <div class="card-body">
+                <img
+                  class="card-image"
+                  src="images/logo-opera.svg"
+                  alt="Google Chrome"
+                />
+                <p class="card-title">Add to Opera</p>
+                <p class="card-text">Minimum version 46</p>
+              </div>
+              <img class="image-dots" src="images/bg-dots.svg" alt="Big dots" />
+              <div class="card-footer">
+                <button class="btn btn-primary">Add & Install Extension</button>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
 
-				<nav class="footer-nav">
-					<ul class="footer-nav-list">
-						<li class="footer-nav-item">
-							<a class="footer-nav-link" href="#">Features</a>
-						</li>
-						<li class="footer-nav-item">
-							<a class="footer-nav-link" href="#">Pricing</a>
-						</li>
-						<li class="footer-nav-item">
-							<a class="footer-nav-link" href="#">Contact</a>
-						</li>
+      <!-- F.A.Q SECTION -->
+      <section class="faq-section">
+        <div class="container">
+          <header class="faq-header">
+            <h2 class="heading-secondary">Frequently Asked Questions</h2>
+            <p class="faq-text">
+              Here are some of our FAQs. If you have any other questions you’d
+              like answered please feel free to email us.
+            </p>
+          </header>
+          <main>
+            <ul class="faq-list">
+              <li class="faq-item">
+                <div class="faq-question">
+                  <span>What is Bookmark?</span>
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <p class="faq-answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  tincidunt justo eget ultricies fringilla. Phasellus blandit
+                  ipsum quis quam ornare mattis.
+                </p>
+              </li>
+              <li class="faq-item">
+                <div class="faq-question">
+                  <span> How can I request a new browser?</span>
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                  luctus eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdie tVivamus luctus
+                  eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdiet.
+                </p>
+              </li>
+              <li class="faq-item">
+                <div class="faq-question">
+                  <span>Is there a mobile app?</span>
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <p class="faq-answer">
+                  Sed consectetur quam id neque fermentum accumsan. Praesent
+                  luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                  Cras in ligula quis est pharetra mattis sit amet pharetra
+                  purus. Sed sollicitudin ex et ultricies bibendum.
+                </p>
+              </li>
+              <li class="faq-item">
+                <div class="faq-question">
+                  <span>What about other Chromium browsers?</span>
+                  <svg
+                    class="icon-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+                <p class="faq-answer">
+                  Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                  placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                  gravida pellentesque non ut velit.
+                </p>
+              </li>
+            </ul>
+            <button class="btn btn-primary">More Info</button>
+          </main>
+        </div>
+      </section>
 
-						<div class="socials">
-							<li class="footer-nav-item">
-								<a href="#" class="footer-nav-link">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="24"
-										height="24"
-									>
-										<path
-											class="social-icon"
-											fill="#FFF"
-											fill-rule="evenodd"
-											d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
-										/>
-									</svg>
-								</a>
-							</li>
-							<li class="footer-nav-item">
-								<a href="#" class="footer-nav-link">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="24"
-										height="20"
-									>
-										<path
-											class="social-icon"
-											fill="#FFF"
-											fill-rule="evenodd"
-											d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
-										/>
-									</svg>
-								</a>
-							</li>
-						</div>
-					</ul>
-				</nav>
-			</div>
-		</footer>
+      <!-- CONTACT SECTION -->
+      <section class="contact-section">
+        <div class="container contact-container">
+          <p class="contact-subheading">35,000+ already joined</p>
+          <h2 class="heading-secondary">
+            Stay up-to-date with what we’re doing
+          </h2>
+          <form action="#" class="form">
+            <div class="input-container">
+              <input type="text" placeholder="Enter your email address" />
+              <div class="error-msg">Whoops, make sure it's an email</div>
+            </div>
+            <button class="btn btn-secondary" type="submit">Contact Us</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-		></script>
-		<script src="./js/script.js"></script>
-	</body>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <a class="logo-link" href="#">
+          <img class="logo" src="images/logo-bookmark-white.svg" alt="Logo" />
+        </a>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#">Features</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#">Pricing</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#">Contact</a>
+            </li>
+
+            <div class="socials">
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="20"
+                  >
+                    <path
+                      class="social-icon"
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
